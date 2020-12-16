@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,11 @@ namespace LZUJ9F_project
 {
     public partial class Form1 : Form
     {
+        LottoEntities context = new LottoEntities();
         public Form1()
         {
             InitializeComponent();
+            context.Lotteries.Load();
         }
     }
 }

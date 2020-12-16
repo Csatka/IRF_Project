@@ -155,55 +155,50 @@ namespace LZUJ9F_project
             // 
             this.numButton1.BackColor = System.Drawing.Color.Gold;
             this.numButton1.Enabled = false;
-            this.numButton1.Location = new System.Drawing.Point(213, 87);
+            this.numButton1.Location = new System.Drawing.Point(176, 83);
             this.numButton1.Name = "numButton1";
             this.numButton1.Size = new System.Drawing.Size(50, 50);
             this.numButton1.TabIndex = 11;
-            this.numButton1.Text = "numButton1";
             this.numButton1.UseVisualStyleBackColor = false;
             // 
             // numButton2
             // 
             this.numButton2.BackColor = System.Drawing.Color.Gold;
             this.numButton2.Enabled = false;
-            this.numButton2.Location = new System.Drawing.Point(289, 87);
+            this.numButton2.Location = new System.Drawing.Point(267, 83);
             this.numButton2.Name = "numButton2";
             this.numButton2.Size = new System.Drawing.Size(50, 50);
             this.numButton2.TabIndex = 12;
-            this.numButton2.Text = "numButton2";
             this.numButton2.UseVisualStyleBackColor = false;
             // 
             // numButton3
             // 
             this.numButton3.BackColor = System.Drawing.Color.Gold;
             this.numButton3.Enabled = false;
-            this.numButton3.Location = new System.Drawing.Point(371, 87);
+            this.numButton3.Location = new System.Drawing.Point(371, 83);
             this.numButton3.Name = "numButton3";
             this.numButton3.Size = new System.Drawing.Size(50, 50);
             this.numButton3.TabIndex = 13;
-            this.numButton3.Text = "numButton3";
             this.numButton3.UseVisualStyleBackColor = false;
             // 
             // numButton4
             // 
             this.numButton4.BackColor = System.Drawing.Color.Gold;
             this.numButton4.Enabled = false;
-            this.numButton4.Location = new System.Drawing.Point(453, 87);
+            this.numButton4.Location = new System.Drawing.Point(467, 83);
             this.numButton4.Name = "numButton4";
             this.numButton4.Size = new System.Drawing.Size(50, 50);
             this.numButton4.TabIndex = 14;
-            this.numButton4.Text = "numButton4";
             this.numButton4.UseVisualStyleBackColor = false;
             // 
             // numButton5
             // 
             this.numButton5.BackColor = System.Drawing.Color.Gold;
             this.numButton5.Enabled = false;
-            this.numButton5.Location = new System.Drawing.Point(533, 87);
+            this.numButton5.Location = new System.Drawing.Point(562, 83);
             this.numButton5.Name = "numButton5";
             this.numButton5.Size = new System.Drawing.Size(50, 50);
             this.numButton5.TabIndex = 15;
-            this.numButton5.Text = "numButton5";
             this.numButton5.UseVisualStyleBackColor = false;
             // 
             // Form1
