@@ -29,11 +29,6 @@ namespace LZUJ9F_project
         /// </summary>
         private void InitializeComponent()
         {
-            this.winListBox1 = new LZUJ9F_project.WinListBox();
-            this.winListBox2 = new LZUJ9F_project.WinListBox();
-            this.winListBox3 = new LZUJ9F_project.WinListBox();
-            this.winListBox4 = new LZUJ9F_project.WinListBox();
-            this.winListBox5 = new LZUJ9F_project.WinListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -45,57 +40,12 @@ namespace LZUJ9F_project
             this.numButton3 = new LZUJ9F_project.NumButton();
             this.numButton4 = new LZUJ9F_project.NumButton();
             this.numButton5 = new LZUJ9F_project.NumButton();
+            this.winListBox1 = new LZUJ9F_project.WinListBox();
+            this.winListBox2 = new LZUJ9F_project.WinListBox();
+            this.winListBox3 = new LZUJ9F_project.WinListBox();
+            this.winListBox4 = new LZUJ9F_project.WinListBox();
+            this.winListBox5 = new LZUJ9F_project.WinListBox();
             this.SuspendLayout();
-            // 
-            // winListBox1
-            // 
-            this.winListBox1.Enabled = false;
-            this.winListBox1.FormattingEnabled = true;
-            this.winListBox1.Location = new System.Drawing.Point(30, 314);
-            this.winListBox1.Name = "winListBox1";
-            this.winListBox1.Size = new System.Drawing.Size(120, 95);
-            this.winListBox1.TabIndex = 0;
-            this.winListBox1.Visible = false;
-            // 
-            // winListBox2
-            // 
-            this.winListBox2.Enabled = false;
-            this.winListBox2.FormattingEnabled = true;
-            this.winListBox2.Location = new System.Drawing.Point(186, 314);
-            this.winListBox2.Name = "winListBox2";
-            this.winListBox2.Size = new System.Drawing.Size(120, 95);
-            this.winListBox2.TabIndex = 1;
-            this.winListBox2.Visible = false;
-            // 
-            // winListBox3
-            // 
-            this.winListBox3.Enabled = false;
-            this.winListBox3.FormattingEnabled = true;
-            this.winListBox3.Location = new System.Drawing.Point(340, 314);
-            this.winListBox3.Name = "winListBox3";
-            this.winListBox3.Size = new System.Drawing.Size(120, 95);
-            this.winListBox3.TabIndex = 2;
-            this.winListBox3.Visible = false;
-            // 
-            // winListBox4
-            // 
-            this.winListBox4.Enabled = false;
-            this.winListBox4.FormattingEnabled = true;
-            this.winListBox4.Location = new System.Drawing.Point(492, 314);
-            this.winListBox4.Name = "winListBox4";
-            this.winListBox4.Size = new System.Drawing.Size(120, 95);
-            this.winListBox4.TabIndex = 3;
-            this.winListBox4.Visible = false;
-            // 
-            // winListBox5
-            // 
-            this.winListBox5.Enabled = false;
-            this.winListBox5.FormattingEnabled = true;
-            this.winListBox5.Location = new System.Drawing.Point(641, 314);
-            this.winListBox5.Name = "winListBox5";
-            this.winListBox5.Size = new System.Drawing.Size(120, 95);
-            this.winListBox5.TabIndex = 4;
-            this.winListBox5.Visible = false;
             // 
             // button1
             // 
@@ -202,11 +152,61 @@ namespace LZUJ9F_project
             this.numButton5.TabIndex = 15;
             this.numButton5.UseVisualStyleBackColor = false;
             // 
+            // winListBox1
+            // 
+            this.winListBox1.DisplayMember = "Name";
+            this.winListBox1.FormattingEnabled = true;
+            this.winListBox1.Location = new System.Drawing.Point(47, 329);
+            this.winListBox1.Name = "winListBox1";
+            this.winListBox1.Size = new System.Drawing.Size(120, 95);
+            this.winListBox1.TabIndex = 16;
+            // 
+            // winListBox2
+            // 
+            this.winListBox2.DisplayMember = "Name";
+            this.winListBox2.FormattingEnabled = true;
+            this.winListBox2.Location = new System.Drawing.Point(197, 329);
+            this.winListBox2.Name = "winListBox2";
+            this.winListBox2.Size = new System.Drawing.Size(120, 95);
+            this.winListBox2.TabIndex = 17;
+            // 
+            // winListBox3
+            // 
+            this.winListBox3.DisplayMember = "Name";
+            this.winListBox3.FormattingEnabled = true;
+            this.winListBox3.Location = new System.Drawing.Point(349, 329);
+            this.winListBox3.Name = "winListBox3";
+            this.winListBox3.Size = new System.Drawing.Size(120, 95);
+            this.winListBox3.TabIndex = 18;
+            // 
+            // winListBox4
+            // 
+            this.winListBox4.DisplayMember = "Name";
+            this.winListBox4.FormattingEnabled = true;
+            this.winListBox4.Location = new System.Drawing.Point(492, 329);
+            this.winListBox4.Name = "winListBox4";
+            this.winListBox4.Size = new System.Drawing.Size(120, 95);
+            this.winListBox4.TabIndex = 19;
+            // 
+            // winListBox5
+            // 
+            this.winListBox5.DisplayMember = "Name";
+            this.winListBox5.FormattingEnabled = true;
+            this.winListBox5.Location = new System.Drawing.Point(628, 329);
+            this.winListBox5.Name = "winListBox5";
+            this.winListBox5.Size = new System.Drawing.Size(120, 95);
+            this.winListBox5.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.winListBox5);
+            this.Controls.Add(this.winListBox4);
+            this.Controls.Add(this.winListBox3);
+            this.Controls.Add(this.winListBox2);
+            this.Controls.Add(this.winListBox1);
             this.Controls.Add(this.numButton5);
             this.Controls.Add(this.numButton4);
             this.Controls.Add(this.numButton3);
@@ -218,11 +218,6 @@ namespace LZUJ9F_project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.winListBox5);
-            this.Controls.Add(this.winListBox4);
-            this.Controls.Add(this.winListBox3);
-            this.Controls.Add(this.winListBox2);
-            this.Controls.Add(this.winListBox1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -231,12 +226,6 @@ namespace LZUJ9F_project
         }
 
         #endregion
-
-        private WinListBox winListBox1;
-        private WinListBox winListBox2;
-        private WinListBox winListBox3;
-        private WinListBox winListBox4;
-        private WinListBox winListBox5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -248,6 +237,11 @@ namespace LZUJ9F_project
         private NumButton numButton3;
         private NumButton numButton4;
         private NumButton numButton5;
+        private WinListBox winListBox1;
+        private WinListBox winListBox2;
+        private WinListBox winListBox3;
+        private WinListBox winListBox4;
+        private WinListBox winListBox5;
     }
 }
 

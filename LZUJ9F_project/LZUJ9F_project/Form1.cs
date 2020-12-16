@@ -31,6 +31,12 @@ namespace LZUJ9F_project
 
         public void RollNew()
         {
+            OneHit.Clear();
+            TwoHit.Clear();
+            ThreeHit.Clear();
+            FourHit.Clear();
+            FiveHit.Clear();
+
             Random rnd = new Random();
             int[] winnum = new int[5];
             for (int i = 0; i < 5; i++)
@@ -42,6 +48,61 @@ namespace LZUJ9F_project
             numButton3.Text = winnum[2].ToString();
             numButton4.Text = winnum[3].ToString();
             numButton5.Text = winnum[4].ToString();
+
+            foreach (var Lottery in context.Lotteries)
+            {
+                int hit = 0;
+                for (int i = 0; i < 5; i++)
+                {
+                    if (Lottery.Number1 == winnum[i])
+                    {
+                        hit++;
+                    }
+                    if (Lottery.Number2 == winnum[i])
+                    {
+                        hit++;
+                    }
+                    if (Lottery.Number3 == winnum[i])
+                    {
+                        hit++;
+                    }
+                    if (Lottery.Number4 == winnum[i])
+                    {
+                        hit++;
+                    }
+                    if (Lottery.Number5 == winnum[i])
+                    {
+                        hit++;
+                    }
+                }
+                switch (hit)
+                {
+                    case 1:
+                        OneHit.Add(Lottery);
+                        break;
+                    case 2:
+                        TwoHit.Add(Lottery);
+                        break;
+                    case 3:
+                        ThreeHit.Add(Lottery);
+                        break;
+                    case 4:
+                        FourHit.Add(Lottery);
+                        break;
+                    case 5:
+                        FiveHit.Add(Lottery);
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+            winListBox1.DataSource = OneHit;
+            winListBox2.DataSource = TwoHit;
+            winListBox3.DataSource = ThreeHit;
+            winListBox4.DataSource = FourHit;
+            winListBox5.DataSource = FiveHit;
+
         }
 
         private void button1_Click(object sender, EventArgs e)

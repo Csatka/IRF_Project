@@ -11,9 +11,9 @@ namespace LZUJ9F_project
     {
         public WinListBox()
         {
-            Visible = false;
+            Visible = true;
             ValueMemberChanged += WinListBox_ValueMemberChanged;
-            
+            DisplayMember = "Name";
             
         }
 
