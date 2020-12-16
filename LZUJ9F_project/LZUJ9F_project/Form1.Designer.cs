@@ -229,7 +229,7 @@ namespace LZUJ9F_project
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.CadetBlue;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(804, 451);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.winListBox5);
             this.Controls.Add(this.winListBox4);
@@ -247,6 +247,7 @@ namespace LZUJ9F_project
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
+            this.MinimumSize = new System.Drawing.Size(820, 490);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
