@@ -43,6 +43,13 @@ namespace LZUJ9F_project
             {
                 winnum[i] = rnd.Next(1, 91);
             }
+
+            if (!CheckWinningNumbers(winnum))
+            {
+                MessageBox.Show("Kettő vagy több szám megegyezik, a sorsolás érvénytelen!");
+                return;
+            }
+
             numButton1.Text = winnum[0].ToString();
             numButton2.Text = winnum[1].ToString();
             numButton3.Text = winnum[2].ToString();
@@ -108,6 +115,32 @@ namespace LZUJ9F_project
         private void button1_Click(object sender, EventArgs e)
         {
             RollNew();
+        }
+        public bool CheckWinningNumbers(int[] winnum)
+        {
+            int match = 0;
+            for (int i = 0; i < 5; i++)
+            {
+                for (int j = i; j < 4; j++)
+                {
+                    if (winnum[i] == winnum[j + 1])
+                    {
+
+                        match++;
+                    }
+
+                }
+            }
+            if (match == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+
         }
     }
 }
