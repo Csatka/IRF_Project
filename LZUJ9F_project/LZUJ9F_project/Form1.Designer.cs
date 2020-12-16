@@ -105,6 +105,7 @@ namespace LZUJ9F_project
             this.button1.TabIndex = 5;
             this.button1.Text = "Sorsolás";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
