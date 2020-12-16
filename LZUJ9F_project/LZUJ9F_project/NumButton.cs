@@ -16,6 +16,8 @@ namespace LZUJ9F_project
             Width = Height;
             Enabled = false;
             BackColor = Color.Gold;
+            Font = new Font("Rockwell", 16);
+
             
         }
     }
