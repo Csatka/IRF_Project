@@ -50,12 +50,16 @@ namespace LZUJ9F_project
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(360, 34);
+            this.button1.BackColor = System.Drawing.Color.Honeydew;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.Font = new System.Drawing.Font("Rockwell", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(330, 23);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(134, 43);
             this.button1.TabIndex = 5;
             this.button1.Text = "Sorsolás";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -107,7 +111,7 @@ namespace LZUJ9F_project
             // 
             this.numButton1.BackColor = System.Drawing.Color.Gold;
             this.numButton1.Enabled = false;
-            this.numButton1.Location = new System.Drawing.Point(176, 83);
+            this.numButton1.Location = new System.Drawing.Point(179, 83);
             this.numButton1.Name = "numButton1";
             this.numButton1.Size = new System.Drawing.Size(50, 50);
             this.numButton1.TabIndex = 11;
@@ -117,7 +121,7 @@ namespace LZUJ9F_project
             // 
             this.numButton2.BackColor = System.Drawing.Color.Gold;
             this.numButton2.Enabled = false;
-            this.numButton2.Location = new System.Drawing.Point(267, 83);
+            this.numButton2.Location = new System.Drawing.Point(276, 83);
             this.numButton2.Name = "numButton2";
             this.numButton2.Size = new System.Drawing.Size(50, 50);
             this.numButton2.TabIndex = 12;
@@ -200,12 +204,14 @@ namespace LZUJ9F_project
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(317, 385);
+            this.button2.BackColor = System.Drawing.Color.Honeydew;
+            this.button2.Font = new System.Drawing.Font("Rockwell", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(210, 377);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(173, 23);
+            this.button2.Size = new System.Drawing.Size(365, 47);
             this.button2.TabIndex = 21;
-            this.button2.Text = "Eredmények mentése Excelbe";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Eredmények mentése";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
