@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Excel = Microsoft.Office.Interop.Excel;
+using System.Reflection;
 
 namespace LZUJ9F_project
 {
@@ -20,6 +22,10 @@ namespace LZUJ9F_project
         BindingList<Lottery> ThreeHit = new BindingList<Lottery>();
         BindingList<Lottery> FourHit = new BindingList<Lottery>();
         BindingList<Lottery> FiveHit = new BindingList<Lottery>();
+
+        Excel.Application xlApp;
+        Excel.Workbook xlWB;
+        Excel.Worksheet xlSheet;
         public Form1()
         {
             InitializeComponent();
@@ -141,6 +147,125 @@ namespace LZUJ9F_project
             }
 
 
+        }
+
+        private void CreateExcel()
+        {
+            try
+            {
+                xlApp = new Excel.Application();
+                xlWB = xlApp.Workbooks.Add(Missing.Value);
+                xlSheet = xlWB.ActiveSheet;
+                CreateTable();
+
+                xlApp.Visible = true;
+                xlApp.UserControl = true;
+            }
+            catch (Exception ex)
+            {
+                string errMsg = string.Format("Error: {0}\nLine: {1}", ex.Message, ex.Source);
+                MessageBox.Show(errMsg, "Error");
+
+                xlWB.Close(false, Type.Missing, Type.Missing);
+                xlApp.Quit();
+                xlWB = null;
+                xlApp = null;
+            }
+        }
+
+        private void CreateTable()
+        {
+            string[] headers = new string[]
+            {
+                "1 találat",
+                "2 találat",
+                "3 találat",
+                "4 találat",
+                "5 találat",
+            };
+            
+            for (int i = 0; i < headers.Length; i++)
+            {
+                xlSheet.Cells[1, i + 1] = headers[i];
+            }
+
+            if (OneHit.Count != 0)
+            {
+                for (int i = 0; i < OneHit.Count; i++)
+                {
+                    xlSheet.Cells[i + 2, 1] = OneHit[i].Name;
+                }
+            }
+
+            if (TwoHit.Count != 0)
+            {
+                for (int i = 0; i < TwoHit.Count; i++)
+                {
+                    xlSheet.Cells[i + 2, 2] = TwoHit[i].Name;
+                }
+            }
+
+            if (ThreeHit.Count != 0)
+            {
+                for (int i = 0; i < ThreeHit.Count; i++)
+                {
+                    xlSheet.Cells[i + 2, 3] = ThreeHit[i].Name;
+                }
+            }
+
+            if (FourHit.Count != 0)
+            {
+                for (int i = 0; i < FourHit.Count; i++)
+                {
+                    xlSheet.Cells[i + 2, 4] = FourHit[i].Name;
+                }
+            }
+
+            if (FiveHit.Count != 0)
+            {
+                for (int i = 0; i < FiveHit.Count; i++)
+                {
+                    xlSheet.Cells[i + 2, 5] = FiveHit[i].Name;
+                }
+            }
+            
+
+            Excel.Range headerRange = xlSheet.get_Range(GetCell(1, 1), GetCell(1, headers.Length));
+            headerRange.Font.Bold = true;
+            headerRange.VerticalAlignment = Excel.XlVAlign.xlVAlignCenter;
+            headerRange.HorizontalAlignment = Excel.XlHAlign.xlHAlignCenter;
+            headerRange.EntireColumn.AutoFit();
+            headerRange.RowHeight = 40;
+            headerRange.Interior.Color = Color.Orange;
+
+            int lastRowID = xlSheet.UsedRange.Rows.Count;
+            Excel.Range fullRange = xlSheet.get_Range(GetCell(1, 1), GetCell(lastRowID, headers.Length));
+            fullRange.BorderAround2(Excel.XlLineStyle.xlContinuous, Excel.XlBorderWeight.xlThick);
+
+
+
+        }
+        private string GetCell(int x, int y)
+        {
+            string ExcelCoordinate = "";
+            int dividend = y;
+            int modulo;
+
+            while (dividend > 0)
+            {
+                modulo = (dividend - 1) % 26;
+                ExcelCoordinate = Convert.ToChar(65 + modulo).ToString() + ExcelCoordinate;
+                dividend = (int)((dividend - modulo) / 26);
+
+            }
+            ExcelCoordinate += x.ToString();
+
+            return ExcelCoordinate;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CreateExcel();
         }
     }
 }

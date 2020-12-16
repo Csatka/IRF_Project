@@ -45,6 +45,7 @@ namespace LZUJ9F_project
             this.winListBox3 = new LZUJ9F_project.WinListBox();
             this.winListBox4 = new LZUJ9F_project.WinListBox();
             this.winListBox5 = new LZUJ9F_project.WinListBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -60,7 +61,7 @@ namespace LZUJ9F_project
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(68, 279);
+            this.label1.Location = new System.Drawing.Point(79, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(44, 13);
             this.label1.TabIndex = 6;
@@ -69,7 +70,7 @@ namespace LZUJ9F_project
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(219, 279);
+            this.label2.Location = new System.Drawing.Point(225, 202);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 7;
@@ -78,7 +79,7 @@ namespace LZUJ9F_project
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(368, 279);
+            this.label3.Location = new System.Drawing.Point(368, 202);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 8;
@@ -87,7 +88,7 @@ namespace LZUJ9F_project
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(530, 279);
+            this.label4.Location = new System.Drawing.Point(531, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(44, 13);
             this.label4.TabIndex = 9;
@@ -96,7 +97,7 @@ namespace LZUJ9F_project
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(675, 279);
+            this.label5.Location = new System.Drawing.Point(673, 202);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 13);
             this.label5.TabIndex = 10;
@@ -156,7 +157,7 @@ namespace LZUJ9F_project
             // 
             this.winListBox1.DisplayMember = "Name";
             this.winListBox1.FormattingEnabled = true;
-            this.winListBox1.Location = new System.Drawing.Point(47, 329);
+            this.winListBox1.Location = new System.Drawing.Point(47, 236);
             this.winListBox1.Name = "winListBox1";
             this.winListBox1.Size = new System.Drawing.Size(120, 95);
             this.winListBox1.TabIndex = 16;
@@ -165,7 +166,7 @@ namespace LZUJ9F_project
             // 
             this.winListBox2.DisplayMember = "Name";
             this.winListBox2.FormattingEnabled = true;
-            this.winListBox2.Location = new System.Drawing.Point(197, 329);
+            this.winListBox2.Location = new System.Drawing.Point(197, 236);
             this.winListBox2.Name = "winListBox2";
             this.winListBox2.Size = new System.Drawing.Size(120, 95);
             this.winListBox2.TabIndex = 17;
@@ -174,7 +175,7 @@ namespace LZUJ9F_project
             // 
             this.winListBox3.DisplayMember = "Name";
             this.winListBox3.FormattingEnabled = true;
-            this.winListBox3.Location = new System.Drawing.Point(349, 329);
+            this.winListBox3.Location = new System.Drawing.Point(344, 236);
             this.winListBox3.Name = "winListBox3";
             this.winListBox3.Size = new System.Drawing.Size(120, 95);
             this.winListBox3.TabIndex = 18;
@@ -183,7 +184,7 @@ namespace LZUJ9F_project
             // 
             this.winListBox4.DisplayMember = "Name";
             this.winListBox4.FormattingEnabled = true;
-            this.winListBox4.Location = new System.Drawing.Point(492, 329);
+            this.winListBox4.Location = new System.Drawing.Point(492, 236);
             this.winListBox4.Name = "winListBox4";
             this.winListBox4.Size = new System.Drawing.Size(120, 95);
             this.winListBox4.TabIndex = 19;
@@ -192,16 +193,28 @@ namespace LZUJ9F_project
             // 
             this.winListBox5.DisplayMember = "Name";
             this.winListBox5.FormattingEnabled = true;
-            this.winListBox5.Location = new System.Drawing.Point(628, 329);
+            this.winListBox5.Location = new System.Drawing.Point(644, 236);
             this.winListBox5.Name = "winListBox5";
             this.winListBox5.Size = new System.Drawing.Size(120, 95);
             this.winListBox5.TabIndex = 20;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(317, 385);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(173, 23);
+            this.button2.TabIndex = 21;
+            this.button2.Text = "Eredmények mentése Excelbe";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.CadetBlue;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.winListBox5);
             this.Controls.Add(this.winListBox4);
             this.Controls.Add(this.winListBox3);
@@ -242,6 +255,7 @@ namespace LZUJ9F_project
         private WinListBox winListBox3;
         private WinListBox winListBox4;
         private WinListBox winListBox5;
+        private System.Windows.Forms.Button button2;
     }
 }
 
